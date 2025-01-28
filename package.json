@@ -5,8 +5,11 @@
   "dependencies": {
     "cra-template": "1.2.0",
     "dotenv": "^16.4.7",
+    "eslint": "^8.57.1",
+    "prettier": "^3.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-error-boundary": "^5.0.0",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.28.2",
     "react-scripts": "5.0.1"
