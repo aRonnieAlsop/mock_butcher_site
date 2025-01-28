@@ -30,9 +30,8 @@
   }
   
 
-  .tab:hover {
-    background-color: #C88A65; 
-    transform: scale(1.1);
+  .tab:hover { 
+    transform: scale(2.1);
   }
   
  

@@ -6,16 +6,18 @@
 .header {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     align-items: center;
-    padding: 10px 20px; 
     background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0));
     z-index: 1000;
+    overflow: hidden;
 }
 
 .header .left {
     font-family: 'Playfair Display', serif;
     font-size: 1rem; 
     color: #333;
+    padding-left: 2;
 }
 
 .header .logo {
