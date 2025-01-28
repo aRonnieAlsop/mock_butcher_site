@@ -7,6 +7,7 @@ const LandingPage = () => {
         <div>
             <div className="header">{<Header />}</div>
             <div className="landing">
+                <div className="est-text">est. 2022</div>
             </div>
         </div>);
 

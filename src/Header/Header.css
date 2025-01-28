@@ -19,6 +19,16 @@
     color: #333;
 }
 
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 50px;  
+    height: auto;
+}
+
 .header .nav-links {
     display: flex;
     align-items: center;
@@ -84,5 +94,16 @@
 }
 
 .services-dropdown ul li a:hover {
-    color: #007bff; 
+    color: #C88A65; 
+}
+
+
+
+@media(width < 1100px) {
+    .header .nav-links {
+        margin: 0;
+    }
+    .header .phone-number {
+        visibility: hidden;
+    }
 }

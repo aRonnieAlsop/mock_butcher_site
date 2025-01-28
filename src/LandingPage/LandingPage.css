@@ -29,6 +29,16 @@ body, html {
     background-repeat: no-repeat;
 }
 
+.est-text {
+  position: absolute;
+  bottom: 13vh;
+  right: 20vh;
+  font-size: 8rem;
+  color: #333;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 
 
 

@@ -7,6 +7,9 @@ const Header = () => {
       <div className="left">
         <h1>Indian Valley Butchers</h1>
       </div>
+      <div className="logo">
+        <img src="./assets/cleaver_vector.png"/>
+      </div>
 
       <div className="nav-links">
         <div className="phone-number">
