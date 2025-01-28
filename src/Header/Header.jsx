@@ -1,32 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import './Header.css';
 
 const Header = () => {
-  const [opacity, setOpacity] = useState(1);
-
-  // event listener to change opacity of header as user scrolls down
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    const headerHeight = document.querySelector('.header').offsetHeight;
-    
-    // this will calculate opacity based on scroll position
-    const opacityValue = 1 - (scrollPosition / headerHeight); // as user scrolls >>> decrease opacity
-    setOpacity(Math.max(opacityValue, 0)); // lets prevent opacity from going below 0 until we figure out if we want it there for the footer or not
-  };
-
-  //the useEffect to add and remove the event listener for the scroll
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
-    <header className="header" style={{ opacity }}>
-    <div>
-        <h2>Indian Valley Butchers</h2>
-    </div>
+    <header className="header">
+      <div className="left">
+        <h1>Indian Valley Butchers</h1>
+      </div>
+
+      <div className="nav-links">
+        <div className="phone-number">
+          <a href="tel:+15555555555">555-555-5555</a>
+        </div>
+
+        <a href="/our-story">Our Story</a>
+
+        <div className="services-dropdown">
+          <a href="#">Services</a> 
+          <ul>
+            <li><a href="/services/web-development">Custom Cut & Wrap</a></li>
+            <li><a href="/services/graphic-design">Ranch Butcher</a></li>
+            <li><a href="/services/game-processing">Wild Game Processing</a></li>
+          </ul>
+        </div>
+
+        <a href="/location">Location</a>
+      </div>
     </header>
   );
 };

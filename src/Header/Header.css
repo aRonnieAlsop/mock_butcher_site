@@ -1,4 +1,84 @@
-.header {
-    background-color: white;
+
+* {
+    box-sizing: border-box;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.header .left {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; 
+    color: #333;
+}
+
+.header .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav-links a {
+    text-decoration: none; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333; 
+    margin-right: 3vw;
+    margin-left: 4vw;
+    font-size: 1rem; 
+}
+
+.header .nav-links a:hover {
+    color: #C88A65;
+}
+
+
+.header .phone-number {
+    font-size: 1.1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    margin-left: 0; 
+}
+
+.header .phone-number a {
+    color: inherit;
+    text-decoration: none; 
+}
+
+
+.services-dropdown {
+    position: relative;
+}
+
+.services-dropdown ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 1vw;
+    margin: 0;
+}
+
+.services-dropdown:hover ul {
+    display: block;
+}
+
+.services-dropdown ul li {
+    padding: 8px 16px;
+}
+
+.services-dropdown ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.services-dropdown ul li a:hover {
+    color: #007bff; 
+}

@@ -5,10 +5,8 @@ import Header from '../Header/Header';
 const LandingPage = () => {
     return (
         <div>
-            <div>{<Header />}</div>
+            <div className="header">{<Header />}</div>
             <div className="landing">
-
-
             </div>
         </div>);
 
