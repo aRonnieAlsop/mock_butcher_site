@@ -1,0 +1,13 @@
+/* LandingPage.css */
+.landing {
+    height: 100vh; /* Ensure it takes up full viewport height */
+    background-image: url('./../../public/assets/butcher_black_and_white.png');
+    background-size: cover; /* Make the image cover the entire screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition of the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Text color for contrast */
+  }
+  
