@@ -20,7 +20,7 @@ const LandingPage = () => {
                         width="600"
                         height="450"
                         style={{ border: 0 }}
-                        src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Place+Name,City,Country"
+                        src={`https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&q=4352+Main+St,+Taylorsville,+CA+95983`}
                         allowFullScreen>
                     </iframe>
                 </div>

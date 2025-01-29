@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="left">
-        <h1>Indian Valley Butchers</h1>
+        <h1>Koyom Valley Butchers</h1>
       </div>
       <div className="logo">
         <img src="./assets/cleaver_vector.png"/>
