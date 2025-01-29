@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css';
 
+
 const Header = () => {
   return (
     <header className="header">
@@ -27,7 +28,7 @@ const Header = () => {
           </ul>
         </div>
 
-        <a href="/location">Location</a>
+        <a href="#map-section">Location</a>
       </div>
     </header>
   );

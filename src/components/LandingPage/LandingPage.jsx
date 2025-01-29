@@ -2,31 +2,30 @@ import React from 'react';
 import './LandingPage.css';
 import Header from '../Header/Header';
 import SideNav from '../SideNav/SideNav';
-import CustomMap from './GoogleMap';
+import GoogleMap from './../Location/GoogleMap';
+import { smoothScrollTo } from '../../smoothScroll';
 
 const LandingPage = () => {
+
+    const handleBackToTopClick = (e) => {
+        e.preventDefault();
+        smoothScrollTo("top-of-page", 1000);
+    }
     return (
-        <div>
+        <div id="top-of-page">
             <div className="header">{<Header />}</div>
             <div className="landing">
                 <div className="est-text">est. 2022</div>
             </div>
             <div>{<SideNav />}</div>
-            <div className="meat-img-container">
-                <img src="./assets/bacon.jpg" className="meat_img" />
-                <div className="map-container">
-                    <iframe
-                        title="Location Map"
-                        width="600"
-                        height="450"
-                        style={{ border: 0 }}
-                        src={`https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&q=4352+Main+St,+Taylorsville,+CA+95983`}
-                        allowFullScreen>
-                    </iframe>
-                </div>
+            <div className="location-container" id="map-section">
+                <GoogleMap />
             </div>
+            <div></div>
             <div className="space"></div>
-            <footer className="footer"></footer>
+            <footer className="footer">
+            <a href="#top-of-page" className="back-to-top" onClick={handleBackToTopClick}>Back to Top</a>
+            </footer>
         </div>);
 
 
