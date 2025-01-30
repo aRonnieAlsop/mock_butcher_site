@@ -1,8 +1,22 @@
 import React from 'react';
 import './Header.css';
+import smoothScroll from 'smooth-scroll-into-view-if-needed';
 
 
 const Header = () => {
+
+  const handleLocationClick = (e) => {
+    e.preventDefault();
+    const targetElement = document.getElementById("map-section");
+    if (targetElement) {
+      smoothScroll(targetElement, {
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest',
+          duration: 2000
+      });
+  }
+};
   return (
     <header className="header">
       <div className="left">
@@ -28,7 +42,7 @@ const Header = () => {
           </ul>
         </div>
 
-        <a href="#map-section">Location</a>
+        <a onClick={handleLocationClick}>Location</a>
       </div>
     </header>
   );

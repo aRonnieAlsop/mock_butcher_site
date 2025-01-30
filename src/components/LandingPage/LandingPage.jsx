@@ -3,14 +3,22 @@ import './LandingPage.css';
 import Header from '../Header/Header';
 import SideNav from '../SideNav/SideNav';
 import GoogleMap from './../Location/GoogleMap';
-import { smoothScrollTo } from '../../smoothScroll';
+import smoothScroll from 'smooth-scroll-into-view-if-needed';
 
 const LandingPage = () => {
 
     const handleBackToTopClick = (e) => {
         e.preventDefault();
-        smoothScrollTo("top-of-page", 1000);
-    }
+        const targetElement = document.getElementById("top-of-page");
+        if (targetElement) {
+            smoothScroll(targetElement, {
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'nearest',
+                duration: 2000
+            });
+        }
+    };
     return (
         <div id="top-of-page">
             <div className="header">{<Header />}</div>
@@ -24,7 +32,7 @@ const LandingPage = () => {
             <div></div>
             <div className="space"></div>
             <footer className="footer">
-            <a href="#top-of-page" className="back-to-top" onClick={handleBackToTopClick}>Back to Top</a>
+            <a className="back-to-top" onClick={handleBackToTopClick}>↑ Back to Top ↑</a>
             </footer>
         </div>);
 
