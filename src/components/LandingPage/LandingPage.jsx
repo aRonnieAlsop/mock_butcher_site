@@ -2,7 +2,7 @@ import React from 'react';
 import './LandingPage.css';
 import Header from '../Header/Header';
 import SideNav from '../SideNav/SideNav';
-import GoogleMap from './../Location/GoogleMap';
+import GoogleMapComponent from './../Location/GoogleMap';
 import smoothScroll from 'smooth-scroll-into-view-if-needed';
 
 const LandingPage = () => {
@@ -27,12 +27,12 @@ const LandingPage = () => {
             </div>
             <div>{<SideNav />}</div>
             <div className="location-container" id="map-section">
-                <GoogleMap />
+                <GoogleMapComponent />
             </div>
             <div></div>
             <div className="space"></div>
             <footer className="footer">
-            <a className="back-to-top" onClick={handleBackToTopClick}>↑ Back to Top ↑</a>
+            <a className="back-to-top" onClick={handleBackToTopClick}>↑ BACK TO THE TOP ↑</a>
             </footer>
         </div>);
 
