@@ -1,1 +1,1 @@
-Local butter just needs a static site for now. So I'm just throwing together a quick React frontend. For SEO purposes: helmet. eslint & error-boundary to watch my back. 
+Local butcher just needs a static site for now. So I'm just throwing together a quick React frontend, except I'm throwing in a Google Cloud Map API so I can decorate the map more to go with their style. For SEO purposes: helmet. eslint & error-boundary to watch my back. 
