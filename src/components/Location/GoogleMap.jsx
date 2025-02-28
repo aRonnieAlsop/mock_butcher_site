@@ -7,9 +7,9 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 40.0643, // Replace with actual latitude
-  lng: -120.5245, // Replace with actual longitude
-};
+    lat: 40.075004522863765, 
+    lng: -120.8412190836375,
+  };
 
 const GoogleMapComponent = () => {
   const { isLoaded } = useJsApiLoader({
