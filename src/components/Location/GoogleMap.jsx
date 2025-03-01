@@ -11,6 +11,44 @@ const center = {
     lng: -120.8412190836375,
   };
 
+  const mapOptions = {
+    styles: [
+      {
+        featureType: "all",
+        elementType: "geometry",
+        stylers: [
+          { hue: "#b5a397" }, 
+          { saturation: 50 },
+          { lightness: 30 }
+        ]
+      },
+      {
+        featureType: "road",
+        elementType: "geometry",
+        stylers: [
+          { color: "#30231d" },
+          { saturation: 30 },
+          { lightness: 20 }
+        ]
+      },
+      {
+        featureType: "water",
+        elementType: "geometry",
+        stylers: [
+          { color: "#E1AD01" } 
+        ]
+      },
+      {
+        featureType: "landscape",
+        elementType: "geometry",
+        stylers: [
+          { color: "#b5a397" } 
+        ]
+      }
+    ]
+  };
+  
+
 const GoogleMapComponent = () => {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY, // Ensure .env file is set up correctly
@@ -21,7 +59,12 @@ const GoogleMapComponent = () => {
   }
 
   return (
-    <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15}>
+    <GoogleMap 
+    mapContainerStyle={containerStyle} 
+    center={center} 
+    zoom={15}
+    options={mapOptions}
+    >
       {/* Custom marker */}
       <Marker 
         position={center} 
