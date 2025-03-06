@@ -1,12 +1,14 @@
-import React from "react";
+import React, {useRef} from "react";
 import "./LandingPage.css";
 import Header from "../Header/Header";
 import SideNav from "../SideNav/SideNav";
 import GoogleMapComponent from "./../Location/GoogleMap";
 import smoothScroll from "smooth-scroll-into-view-if-needed";
 
+
 const LandingPage = () => {
-  
+  const mapSectionRef = useRef(null);
+
   const handleBackToTopClick = (e) => {
     e.preventDefault();
     const targetElement = document.getElementById("top-of-page");
@@ -26,7 +28,7 @@ const LandingPage = () => {
       </div>
       <div>{<SideNav />}</div>
       {/* Location section with Image + Map */}
-      <div className="location-container" id="map-section">
+      <div className="location-container" ref={mapSectionRef} id="map-section">
         {/* Image Section */}
         <div className="location-image">
         <div className="sash-banner">Coming Soon</div>

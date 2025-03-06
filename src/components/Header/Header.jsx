@@ -3,20 +3,20 @@ import './Header.css';
 import smoothScroll from 'smooth-scroll-into-view-if-needed';
 
 
-const Header = () => {
+const Header = ({ mapSectionRef }) => {
 
   const handleLocationClick = (e) => {
     e.preventDefault();
-    const targetElement = document.getElementById("map-section");
-    if (targetElement) {
-      smoothScroll(targetElement, {
-          behavior: 'smooth',
-          block: 'start',
-          inline: 'nearest',
-          duration: 2000
+    if (mapSectionRef && mapSectionRef.current) {
+      smoothScroll(mapSectionRef.current, {
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest',
+        duration: 2000
       });
-  }
-};
+    }
+  };
+
   return (
     <header className="header">
       <div className="left">
