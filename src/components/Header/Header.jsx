@@ -8,11 +8,9 @@ const Header = ({ mapSectionRef }) => {
   const handleLocationClick = (e) => {
     e.preventDefault();
     if (mapSectionRef && mapSectionRef.current) {
-      smoothScroll(mapSectionRef.current, {
+      mapSectionRef.current.scrollIntoView({
         behavior: 'smooth',
-        block: 'start',
-        inline: 'nearest',
-        duration: 2000
+        block: 'start'
       });
     }
   };

@@ -22,7 +22,7 @@ const LandingPage = () => {
 
   return (
     <div id="top-of-page">
-      <div className="header">{<Header />}</div>
+      <div className="header">{<Header mapSectionRef={mapSectionRef}/>}</div>
       <div className="landing">
         <div className="est-text">est. 2022</div>
       </div>
