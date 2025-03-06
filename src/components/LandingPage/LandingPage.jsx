@@ -6,15 +6,14 @@ import GoogleMapComponent from "./../Location/GoogleMap";
 import smoothScroll from "smooth-scroll-into-view-if-needed";
 
 const LandingPage = () => {
+  
   const handleBackToTopClick = (e) => {
     e.preventDefault();
     const targetElement = document.getElementById("top-of-page");
     if (targetElement) {
-      smoothScroll(targetElement, {
+      targetElement.scrollIntoView({
         behavior: "smooth",
         block: "start",
-        inline: "nearest",
-        duration: 2000,
       });
     }
   };
