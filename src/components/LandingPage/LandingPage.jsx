@@ -31,9 +31,8 @@ const LandingPage = () => {
       <div className="location-container" ref={mapSectionRef} id="map-section">
         {/* Image Section */}
         <div className="location-image">
-        <div className="sash-banner">Coming Soon</div>
           <img
-            src="https://www.roadschoolwarriors.com/wp-content/uploads/2010/12/DSCF37211.jpg"
+           src="/tville_downtown.jpg"
             alt="Butcher Shop"
             className="meat-img"
           />
