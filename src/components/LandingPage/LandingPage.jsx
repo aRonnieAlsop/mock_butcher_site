@@ -3,10 +3,12 @@ import "./LandingPage.css";
 import Header from "../Header/Header";
 import SideNav from "../SideNav/SideNav";
 import GoogleMapComponent from "./../Location/GoogleMap";
-import smoothScroll from "smooth-scroll-into-view-if-needed";
+
+
 
 
 const LandingPage = () => {
+
   const mapSectionRef = useRef(null);
 
   const handleBackToTopClick = (e) => {
