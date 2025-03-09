@@ -36,6 +36,7 @@ const LandingPage = () => {
             alt="Butcher Shop"
             className="meat-img"
           />
+          <div className="sash-banner"></div> 
         </div>
         {/* Map Section */}
         <div className="map-wrapper">
