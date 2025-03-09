@@ -96,8 +96,7 @@
     color: #333;
 }
 
-.services-dropdown ul li a:hover {
-    color: #C88A65; 
+.services-dropdown ul li a:hover { 
     transform: scale(1.1);
 }
 
