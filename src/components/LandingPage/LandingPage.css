@@ -116,18 +116,35 @@ body, html {
 .back-to-top:hover {
   border-top: 1px solid #E16E6E;
 }
+  
 
-
-
-/* Responsive Layout: Stack image & map on mobile */
-@media (max-width: 768px) {
+/* Responsive Layout: Stack image & map on mobile (for screens <= 1083px) */
+@media (max-width: 1083px) {
   .location-container {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
+    padding-top: 10vh; 
   }
 
+  /* Make images resize relative to the viewport width */
   .location-image, .map-wrapper {
-    max-width: 90%;
+    max-width: 62%;  
+  }
+
+  .sash-banner {
+    position: absolute;
+    bottom: -100px; 
+    left: 80%; 
+    transform: translateX(-42%) rotate(0deg); 
+    background-size: cover;
+    background-position: center;
+    width: 62%;
+  }
+
+  /* Adjust the map wrapper to be more responsive */
+  .map-wrapper {
+    max-width: 100%;
+    padding-left: 0;
+    margin-top: 88px; 
   }
 }
-  
